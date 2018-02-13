@@ -1,0 +1,39 @@
+
+header {
+	width: 100%;
+	height: 150px;
+	background-color: #21C95B;
+}
+h2 {
+	text-align: center;
+}
+
+input {
+	width: 20%;
+	height: 60px;
+	
+	
+	border-radius: 10px;
+	font-size: 1em;
+	border: 2px solid silver;
+}	
+
+#input {
+	text-align: center;
+	padding-top: 10px;
+}
+
+
+#button:hover {
+	background-color: #C3D0B7;
+}
+
+#button {
+	background-color: #E5DED8;
+	color: green;
+}
+
+#textinn {
+	text-align: center;
+	padding-top: 10px;
+}
