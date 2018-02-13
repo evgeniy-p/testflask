@@ -18,7 +18,9 @@
 	<div id="textinn">
 		<input id="text" placeholder="Код клиента" type="text" name="auth">
 		<input id="text" placeholder="Введите чтобы добавить" type="text" name="inn">
+		{% for post in bdposts %}
 		<input id="text" placeholder="Введите для поиска" type="text" name="search">
+		{% endfor %}
 	</div>
  </body>
 </html>
