@@ -1,3 +1,24 @@
+* {
+	margin: 0;
+	padding: 0;
+	outline: none;
+}
+
+html {
+	height: 100%
+}
+
+body {
+	width: 100%;
+	height: 100%;
+	color: #333;
+	background: #f7f7f7;
+	font-size: 1em;
+	font-family: "Segoe UI", sans-serif;
+	line-height: 135%;
+	background: url('fone.jpg') repeat-y;
+}
+
 header {
 	width: 100%;
 	height: 150px;
@@ -7,7 +28,7 @@ input {
 	border-radius: 7px;
 	font-size: 1em;
 	border: 2px solid silver;
-}
+}	
 
 h2 {
 	width: 20%;
@@ -26,6 +47,14 @@ button {
 	font-size: 1.2em;
 }
 
+textarea {
+	width: 98%;
+	height: 400px;
+	margin-top:10px;
+	border-radius: 7px;
+	font-size: 1.7em;
+	border: 2px solid silver;
+}
 
 #auth {
 	width: 180px;
@@ -63,9 +92,10 @@ button {
 
 #text {
 	width: 98%;
-	height: 400px;
+	height: 200px;
 	margin-top:10px;
 	border-radius: 7px;
-	font-size: 1.7em;
+	font-size: 4em;
 	border: 2px solid silver;
+	text-align: center;
 }
