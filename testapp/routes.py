@@ -27,3 +27,4 @@ def do_entry():
                                                                 request.form['client_code'], code_client=request.form['client_code'])
         except BaseException as e:
                 return render_template('Test.html', res=e)
+          
