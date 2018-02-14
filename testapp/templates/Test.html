@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
  <head>
@@ -9,22 +10,25 @@
  	<header>
 	<h2>TEST</h2>
  	<div id="authd">
- 		<form action="/start" method="POST" name="auth">
- 			<input id="auth" type="text" placeholder="Код клиента" name="auth">	
+ 		<form action="/post" method="POST" name="auth">
+            {% if res %}
+            <h1>{{ res }}</h1>
+            {% endif %}
+ 			<input id="auth" type="text" placeholder="Код клиента" name="auth">
 	</div>
 	<div id="textinn">
 			<input id="search" placeholder="Введите для поиска" type="text" name="search">
-			<button id="searchb" type="submit" name="search">Найти</button>		
+			<button id="searchb" type="submit" name="search">Найти</button>
 	</div>
 	</header>
 	<center>
-	<div id="input">		
+	<div id="input">
 			<textarea name="inn"></textarea>
 			<button id="inn" type="submit" name="inn">Добавить</button>
 			{% for post in from_bd %}
 			<input id="text" value="You shall not pass" name="inn" disabled>
 			{% endfor %}
-		</form>			
+		</form>
 	</div>
 	</center>
  </body>
