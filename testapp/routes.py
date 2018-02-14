@@ -17,14 +17,14 @@ def start():
 @app.route('/post', methods=['POST'])
 def do_entry():
         try:
-                if not request.form['client_code']:
+                if not request.form['']:
                         return render_template('Test.html', res='Введите код клиента!!!')
-                if request.form.get('text_sumb_form'):
-                        return render_template('Test.html', res=request.form['text_sumb_form'] + ' Клиент ' +
-                                                                request.form['client_code'], code_client=request.form['client_code'])
-                if request.form.get('searchbutt'):
-                        return render_template('Test.html', res=request.form['searchbutt']+' Клиент ' +
-                                                                request.form['client_code'], code_client=request.form['client_code'])
+                if request.form.get('inn'):
+                        return render_template('Test.html', res=request.form['inn'] + ' Клиент ' +
+                                                                request.form['auth'], code_client=request.form['auth'])
+                if request.form.get('search'):
+                        return render_template('Test.html', res=request.form['search']+' Клиент ' +
+                                                                request.form['auth'], code_client=request.form['auth'])
         except BaseException as e:
                 return render_template('Test.html', res=e)
           
