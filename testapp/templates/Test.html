@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html>
  <head>
@@ -7,29 +6,29 @@
   <title>Test</title>
  </head>
  <body>
- 	<header>
-	<h2>TEST</h2>
- 	<div id="authd">
- 		<form action="/post" method="POST" name="auth">
-            {% if res %}
-            <h1>{{ res }}</h1>
-            {% endif %}
- 			<input id="auth" type="text" placeholder="Код клиента" name="auth">
-	</div>
-	<div id="textinn">
-			<input id="search" placeholder="Введите для поиска" type="text" name="search">
-			<button id="searchb" type="submit" name="search">Найти</button>
-	</div>
-	</header>
-	<center>
-	<div id="input">
-			<textarea name="inn"></textarea>
-			<button id="inn" type="submit" name="inn">Добавить</button>
-			{% for post in from_bd %}
-			<input id="text" value="You shall not pass" name="inn" disabled>
-			{% endfor %}
-		</form>
-	</div>
-	</center>
+        <header>
+        <h2>TEST</h2>
+        <div id="authd">
+                <form action="/post" method="POST">
+                        <input id="auth" type="text" value="{{ code_client }}" placeholder="Код клиента" name="auth">
+                        {% if res %}
+                        <h1>{{ res }}</h1>
+                        {% endif %}
+        </div>
+        <div id="textinn">
+                        <input id="search" placeholder="Введите для поиска" type="text" name="searchtext">
+                        <button id="searchb" type="submit" value="search" name="search">Найти</button>
+        </div>
+        </header>
+        <center>
+        <div id="input">
+                        <textarea name="inntext"></textarea>
+                        <button id="inn" type="submit" value="inn" name="inn">Добавить</button>
+                </form>
+        {% for post in from_bd %}
+        <input id="text" value="You shall not pass" name="inn" disabled>
+        {% endfor %}
+        </div>
+        </center>
  </body>
 </html>

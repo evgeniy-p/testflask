@@ -17,7 +17,7 @@ def start():
 @app.route('/post', methods=['POST'])
 def do_entry():
         try:
-                if not request.form['']:
+                if not request.form['auth']:
                         return render_template('Test.html', res='Введите код клиента!!!')
                 if request.form.get('inn'):
                         return render_template('Test.html', res=request.form['inn'] + ' Клиент ' +
@@ -27,4 +27,3 @@ def do_entry():
                                                                 request.form['auth'], code_client=request.form['auth'])
         except BaseException as e:
                 return render_template('Test.html', res=e)
-          
