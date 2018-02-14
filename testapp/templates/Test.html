@@ -19,10 +19,11 @@
 	</header>
 	<center>
 	<div id="input">		
-			<!--<input id="text" type="text" name="inn">-->
 			<textarea name="inn"></textarea>
 			<button id="inn" type="submit" name="inn">Добавить</button>
+			{% for post in from_bd %}
 			<input id="text" value="You shall not pass" name="inn" disabled>
+			{% endfor %}
 		</form>			
 	</div>
 	</center>
