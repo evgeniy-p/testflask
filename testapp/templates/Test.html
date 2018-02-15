@@ -7,12 +7,12 @@
  </head>
  <body>
         <header>
-        <h2>TEST</h2>
+        <h2>Test</h2>
         <div id="authd">
                 <form action="/post" method="POST">
                         <input id="auth" type="text" value="{{ code_client }}" placeholder="Код клиента" name="auth">
                         {% if res %}
-                        <h1>{{ res }}</h1>
+                        <input id="stat" value="{{ res }}" name="stat" disabled>
                         {% endif %}
         </div>
         <div id="textinn">
@@ -32,3 +32,4 @@
         </center>
  </body>
 </html>
+
