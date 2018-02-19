@@ -1,4 +1,5 @@
 import pymysql
+import datetime
 
 class Table:
     def __init__(self, table_name, mysql):
@@ -29,7 +30,8 @@ class Table:
         try:
             with self.mysql.cursor() as cursor:
                 cursor.execute("INSERT INTO {table_name} (client_code, comment) VALUES ('{client_code}', "
-                               "'{comment}')".format(table_name=self.name, client_code=self.name, comment=text))
+                               "'{comment}')".format(table_name=self.name, client_code=datetime.datetime.now(),
+                                                     comment=text))
 
         except pymysql.err.Error as e:
             print('error in update db')
