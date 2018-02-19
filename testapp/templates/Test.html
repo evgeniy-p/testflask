@@ -16,17 +16,21 @@
                         {% endif %}
         </div>
         <div id="textinn">
-                        <input id="search" placeholder="Введите для поиска" type="text" name="searchtext">
+                        <input id="search" placeholder="Введите текст комментария" type="text" name="searchtext">
                         <button id="searchb" type="submit" value="search" name="search">Найти</button>
         </div>
         </header>
         <center>
         <div id="input">
+                        {% if have_text %}
+                        <textarea name="inntext">{{ have_text }}</textarea>
+                        {% else %}
                         <textarea name="inntext"></textarea>
+                        {% endif %}
                         <button id="inn" type="submit" value="inn" name="inn">Добавить</button>
                 </form>
         {% for post in from_bd %}
-        <input id="text" value="You shall not pass" name="inn" disabled>
+        <input id="text" value="{{ post.client_code }},  {{ post.comment }}" name="inn" disabled>
         {% endfor %}
         </div>
         </center>

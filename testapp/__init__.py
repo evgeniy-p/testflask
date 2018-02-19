@@ -1,6 +1,6 @@
 from flask import Flask
 import pymysql
-import conf
+from testapp import conf
 
 app = Flask(__name__)
 try:
