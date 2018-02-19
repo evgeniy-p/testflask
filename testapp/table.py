@@ -29,9 +29,8 @@ class Table:
         print('update db')
         try:
             with self.mysql.cursor() as cursor:
-                cursor.execute("INSERT INTO {table_name} (client_code, comment) VALUES ('{client_code}', "
-                               "'{comment}')".format(table_name=self.name, client_code=datetime.datetime.now(),
-                                                     comment=text))
+                cursor.execute("INSERT INTO {table_name} (client_code, comment) VALUES ('{client_code}','{comment}')"
+                               "".format(table_name=self.name, client_code=datetime.datetime.now().strftime("%Y-%m-%d %H:%M"), comment=text))
 
         except pymysql.err.Error as e:
             print('error in update db')
